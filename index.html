@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; connect-src 'self' https://*.supabase.co; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="color-scheme" content="light">
 <title>Peanuts, le magazine absurde et con</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%9C%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap">
 <header>
 <img class="logo" src="images/logo.png" width="500" height="137" alt="Peanuts" referrerpolicy="no-referrer">
-<nav aria-label="Rubriques"><a href="#une">À la une</a><a href="#rubriques">Rubriques</a><a href="#contact">Écrire à la rédaction</a></nav>
+<nav aria-label="Rubriques"><a href="#une">À la une</a><a href="#rubriques">Rubriques</a><a href="connexion.html" id="lien-compte">Connexion</a></nav>
 </header>
 <section class="hero">
 <div>
@@ -34,11 +34,7 @@
 <section class="une" id="une">
 <div class="wrap">
 <h2>À la une, malheureusement</h2>
-<div class="grille">
-<article><h3>J'ai demandé à mon frigo son avis sur la géopolitique</h3><p>Il a bourdonné pendant quarante minutes. Nos experts y voient une position nuancée.</p><span class="sig">Par la rédaction, debout</span></article>
-<article><h3>Enquête : pourquoi les cailloux ne passent jamais leur permis</h3><p>Ils ont le temps, ils ont le calme. Alors quoi ? Nous n'avons pas la réponse, mais nous avons un caillou.</p><span class="sig">Par un type qui a vu un caillou</span></article>
-<article><h3>Le béret, ce chapeau qui a lu des livres</h3><p>Dossier complet sur le seul couvre-chef capable de faire dire « tout à fait » à n'importe qui.</p><span class="sig">Par le rédac' chef, béret vissé</span></article>
-</div>
+<div class="grille" id="grille">Chargement des âneries…</div>
 </div>
 </section>
 
@@ -51,9 +47,12 @@
 
 <footer id="contact"><div class="wrap">
 <p>Peanuts. Fait avec du café et zéro stratégie.</p>
-<p>Une idée absurde ? Écris-nous : redac@peanuts.com</p>
+<p>Une idée absurde ? Écris-nous : redac@peanuts.example</p>
 </div></footer>
 
+<script src="js/config.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/home.js" defer></script>
 <script src="script.js" defer></script>
 </body>
 </html>
