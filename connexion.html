@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://*.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<title>Connexion | Peanuts</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+<a href="index.html" aria-label="Peanuts, accueil"><img class="logo" src="images/logo.png" width="500" height="137" alt="Peanuts" referrerpolicy="no-referrer"></a>
+<nav aria-label="Navigation"><a href="index.html#une">À la une</a><a href="index.html#rubriques">Rubriques</a><a href="connexion.html" id="lien-compte">Connexion</a></nav>
+</header>
+</div>
+<main class="page"><div class="wrap">
+<h2>Ton compte Peanuts</h2>
+<div class="onglets" id="onglets">
+<button class="btn2" type="button" id="t-connexion" aria-pressed="true">Connexion</button>
+<button class="btn2" type="button" id="t-inscription" aria-pressed="false">Inscription</button>
+</div>
+<form class="champs" id="form-auth" novalidate>
+<label>E-mail<input type="email" name="email" autocomplete="email" required></label>
+<label id="champ-pseudo" hidden>Pseudo<input type="text" name="pseudo" autocomplete="nickname" maxlength="24"></label>
+<label>Mot de passe<input type="password" name="mdp" minlength="8" autocomplete="current-password" required></label>
+<button class="btn" type="submit" id="envoyer">Me connecter</button>
+</form>
+<p class="msg" id="msg" role="status"></p>
+<div id="compte" hidden>
+<p id="bonjour"></p>
+<h3>Tes favoris</h3>
+<ul class="liste-fav" id="favs"></ul>
+<button class="btn" type="button" id="deco">Me déconnecter</button>
+</div>
+</div></main>
+<footer id="contact"><div class="wrap">
+<p>Peanuts. Fait avec du café et zéro stratégie.</p>
+<p>Une idée absurde ? Écris-nous : redac@peanuts.example</p>
+</div></footer>
+<script src="js/config.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/connexion.js" defer></script>
+</body>
+</html>
