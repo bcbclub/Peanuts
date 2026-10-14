@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://*.supabase.co; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<title>Article | Peanuts</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+<a href="index.html" aria-label="Peanuts, accueil"><img class="logo" src="images/logo.png" width="500" height="137" alt="Peanuts" referrerpolicy="no-referrer"></a>
+<nav aria-label="Navigation"><a href="index.html#une">À la une</a><a href="index.html#rubriques">Rubriques</a><a href="connexion.html" id="lien-compte">Connexion</a></nav>
+</header>
+</div>
+<main class="page"><div class="wrap lecture">
+<div id="contenu">Chargement…</div>
+<section class="coms" id="coms" hidden>
+<h2>Commentaires</h2>
+<p id="invite-com" hidden><a href="connexion.html">Connecte-toi</a> pour commenter.</p>
+<form class="champs" id="form-com" hidden>
+<label>Ton commentaire<textarea name="texte" maxlength="1000" required></textarea></label>
+<button class="btn" type="submit">Publier</button>
+<p class="msg" id="msg-com" role="status"></p>
+</form>
+<div id="liste-coms"></div>
+</section>
+</div></main>
+<footer id="contact"><div class="wrap">
+<p>Peanuts. Fait avec du café et zéro stratégie.</p>
+<p>Une idée absurde ? Écris-nous : redac@peanuts.example</p>
+</div></footer>
+<script src="js/config.js" defer></script>
+<script src="js/api.js" defer></script>
+<script src="js/article.js" defer></script>
+</body>
+</html>
