@@ -1,42 +1,59 @@
-Peanuts
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="color-scheme" content="light">
+<title>Peanuts, le magazine absurde et con</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A5%9C%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+<img class="logo" src="images/logo.png" width="500" height="137" alt="Peanuts" referrerpolicy="no-referrer">
+<nav aria-label="Rubriques"><a href="#une">À la une</a><a href="#rubriques">Rubriques</a><a href="#contact">Écrire à la rédaction</a></nav>
+</header>
+<section class="hero">
+<div>
+<h1>Le magazine qui n'a aucune excuse.</h1>
+<p>Des enquêtes sans questions, des tests sans résultats et des avis sur des choses qui n'en demandaient pas.</p>
+<button class="btn" id="go" type="button">Sors-moi un truc con</button>
+</div>
+<div class="mascot">
+<button type="button" id="mascot" aria-label="Faire parler le rédacteur en chef">
+<img src="images/mascotte.jpg" width="600" height="681" referrerpolicy="no-referrer" alt="Le rédacteur en chef : une boule de poils orange avec un béret, des lunettes rondes et un café Peanuts">
+</button>
+<div class="bulle" id="bulle" role="status" aria-live="polite">Clique-moi. J'ai des choses à dire, mais pas d'importantes.</div>
+</div>
+</section>
+</div>
 
-[À la une](#une)[Rubriques](#rubriques)[Écrire à la rédaction](#contact)
+<section class="une" id="une">
+<div class="wrap">
+<h2>À la une, malheureusement</h2>
+<div class="grille">
+<article><h3>J'ai demandé à mon frigo son avis sur la géopolitique</h3><p>Il a bourdonné pendant quarante minutes. Nos experts y voient une position nuancée.</p><span class="sig">Par la rédaction, debout</span></article>
+<article><h3>Enquête : pourquoi les cailloux ne passent jamais leur permis</h3><p>Ils ont le temps, ils ont le calme. Alors quoi ? Nous n'avons pas la réponse, mais nous avons un caillou.</p><span class="sig">Par un type qui a vu un caillou</span></article>
+<article><h3>Le béret, ce chapeau qui a lu des livres</h3><p>Dossier complet sur le seul couvre-chef capable de faire dire « tout à fait » à n'importe qui.</p><span class="sig">Par le rédac' chef, béret vissé</span></article>
+</div>
+</div>
+</section>
 
-# Le magazine qui n'a aucune excuse.
+<section class="rub" id="rubriques">
+<div class="wrap">
+<h2>Rubriques sans queue ni tête</h2>
+<ul><li>Actu inutile</li><li>Tests de personnalité douteux</li><li>Horoscope des chaussettes orphelines</li><li>Courrier des cacahuètes</li><li>Météo des émotions</li><li>Recettes interdites par la mémé</li></ul>
+</div>
+</section>
 
-Des enquêtes sans questions, des tests sans résultats et des avis sur des choses qui n'en demandaient pas.
+<footer id="contact"><div class="wrap">
+<p>Peanuts. Fait avec du café et zéro stratégie.</p>
+<p>Une idée absurde ? Écris-nous : redac@peanuts.example</p>
+</div></footer>
 
-Clique-moi. J'ai des choses à dire, mais pas d'importantes.
-
-## À la une, malheureusement
-
-### J'ai demandé à mon frigo son avis sur la géopolitique
-
-Il a bourdonné pendant quarante minutes. Nos experts y voient une position nuancée.
-
-Par la rédaction, debout
-
-### Enquête : pourquoi les cailloux ne passent jamais leur permis
-
-Ils ont le temps, ils ont le calme. Alors quoi ? Nous n'avons pas la réponse, mais nous avons un caillou.
-
-Par un type qui a vu un caillou
-
-### Le béret, ce chapeau qui a lu des livres
-
-Dossier complet sur le seul couvre-chef capable de faire dire « tout à fait » à n'importe qui.
-
-Par le rédac' chef, béret vissé
-
-## Rubriques sans queue ni tête
-
-- Actu inutile
-- Tests de personnalité douteux
-- Horoscope des chaussettes orphelines
-- Courrier des cacahuètes
-- Météo des émotions
-- Recettes interdites par la mémé
-
-Peanuts. Fait avec du café et zéro stratégie.
-
-Une idée absurde ? Écris-nous : redac@peanuts.example
+<script src="script.js" defer></script>
+</body>
+</html>
