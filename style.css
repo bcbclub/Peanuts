@@ -28,9 +28,9 @@ h1{font:900 clamp(2.6rem,7vw,5.4rem)/.95 var(--serif);letter-spacing:-.03em;marg
 h2{font:900 clamp(1.8rem,4vw,2.8rem)/1 var(--serif);margin:0 0 28px;letter-spacing:-.02em}
 .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 article{border:3px solid var(--encre);border-radius:6px;padding:22px;background:var(--c)}
-article:nth-child(1){--c:var(--pistache);transform:rotate(-1deg)}
-article:nth-child(2){--c:var(--ciel);transform:rotate(.8deg)}
-article:nth-child(3){--c:#FFB9A8;transform:rotate(-.6deg)}
+article:nth-child(1){transform:rotate(-1deg)}
+article:nth-child(2){transform:rotate(.8deg)}
+article:nth-child(3){transform:rotate(-.6deg)}
 article h3{font:700 1.5rem/1.1 var(--serif);margin:0 0 10px}
 article p{margin:0 0 12px}
 .sig{font-size:.9rem;opacity:.8}
@@ -44,3 +44,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 footer p{margin:0}
 @media(max-width:800px){.hero,.grille{grid-template-columns:1fr}.hero p{max-width:none}.bulle{left:0}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+[hidden]{display:none!important}
+.c-pistache{--c:var(--pistache)}.c-ciel{--c:var(--ciel)}.c-saumon{--c:#FFB9A8}
+article h3 a{text-decoration:none}article h3 a:hover{text-decoration:underline wavy var(--tomate)}
+.page{padding:28px 0 72px}
+.lecture{max-width:68ch}
+.lecture h1{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:12px}
+.lecture p{font-size:1.15rem;line-height:1.7;margin:0 0 1.1em}
+.barre{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:0 0 28px}
+.btn2{font:600 1rem var(--sans);background:var(--papier);color:var(--encre);border:3px solid var(--encre);border-radius:999px;padding:10px 20px;cursor:pointer}
+.btn2[aria-pressed="true"]{background:var(--tomate);color:var(--papier)}
+.coms{margin-top:48px;border-top:4px solid var(--encre);padding-top:28px}
+.com{border:3px solid var(--encre);background:var(--papier);border-radius:6px;padding:14px 18px;margin:0 0 12px}
+.com b{display:block}.com small{opacity:.7}.com p{margin:6px 0 0;font-size:1rem;white-space:pre-wrap}
+.champs{display:grid;gap:14px;max-width:440px}
+label{font-weight:600;display:grid;gap:4px}
+input,textarea{font:inherit;padding:10px 12px;border:3px solid var(--encre);border-radius:6px;background:var(--papier);color:var(--encre);width:100%}
+textarea{min-height:110px;resize:vertical}
+.msg{font-weight:600;min-height:1.5em;margin:0}.msg.err{color:#A3200E}
+.onglets{display:flex;gap:10px;margin:0 0 22px}
+.liste-fav{padding-left:20px}
