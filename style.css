@@ -43,10 +43,10 @@ h1{max-width:680px;margin:0 0 25px;font-size:clamp(3.2rem,7vw,6.2rem);line-heigh
 .btn:active,.btn2:active{transform:translate(1px,1px);box-shadow:none}
 .hero-note{margin:19px 0 0;font-size:.78rem;font-weight:650;opacity:.72}
 .mascot{position:relative;width:min(100%,440px);justify-self:center;animation:mascotte .85s .12s both}
-.mascot>button{display:block;width:100%;padding:0;border:0;border-radius:28px;background:transparent;-webkit-tap-highlight-color:transparent}
+.mascot>button{display:block;width:100%;padding:0;border:0;border-radius:28px;background:transparent;-webkit-tap-highlight-color:transparent}.mascot-art{display:block;width:100%;height:auto;overflow:visible;transform-origin:50% 80%;transition:transform 350ms cubic-bezier(.2,.8,.2,1)}
 .mascot img{width:100%;mix-blend-mode:multiply;transform-origin:50% 80%;transition:transform 350ms cubic-bezier(.2,.8,.2,1)}
-.mascot>button:hover img{transform:rotate(2deg) translateY(-5px)}
-.mascot>button:active img{transform:scale(.97) rotate(-2deg)}
+.mascot>button:hover .mascot-art{transform:rotate(2deg) translateY(-5px)}
+.mascot>button:active .mascot-art{transform:scale(.97) rotate(-2deg)}
 .bulle{position:absolute;z-index:2;top:3%;left:-7%;max-width:225px;padding:13px 16px;border:var(--bordure);border-radius:19px;background:var(--papier);box-shadow:3px 3px 0 var(--encre);font-size:.88rem;font-weight:750;line-height:1.4;transform:rotate(-4deg);animation:pop .5s .4s both}
 .bulle::after{content:"";position:absolute;right:25px;bottom:-15px;width:0;height:0;border:9px solid transparent;border-top:12px solid var(--encre)}
 .bulle.parle{animation:parle .3s ease}
