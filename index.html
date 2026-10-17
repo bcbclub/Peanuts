@@ -1,13 +1,112 @@
-<button
-  type="button"
-  id="mascot"
-  aria-label="Faire parler le rédacteur en chef"
-  aria-controls="bulle"
->
-  <img
-    src="images/mascotte.jpg"
-    width="600"
-    height="681"
-    alt="Le rédacteur en chef de Peanuts, avec son béret, ses lunettes et son café"
-  >
-</button>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFE04D">
+  <meta name="description" content="Peanuts, le magazine complètement absurde et loufoque. Des idées, des découvertes et des publications qui ne se prennent pas trop au sérieux.">
+  <title>Peanuts — Le magazine complètement absurde</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="wrap">
+    <a class="wordmark" href="#accueil" aria-label="Peanuts, accueil">peanuts<span>!</span></a>
+    <nav aria-label="Navigation principale">
+      <a href="#une">À la une</a>
+      <a href="#rubriques">Rubriques</a>
+      <a href="#proposer">Participer</a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="hero wrap" id="accueil" aria-labelledby="titre-principal">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Le magazine pas comme les autres</p>
+        <h1 id="titre-principal">Beaucoup d’idées.<br><span class="titre-surbrillance">Peu de sérieux.</span></h1>
+        <p>Peanuts, c’est un terrain de jeu pour les idées, les découvertes et les trucs complètement loufoques. On apprend, on imagine et surtout, on ne se prend pas trop au sérieux.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#une">Explorer le magazine <span aria-hidden="true">↘</span></a>
+          <button class="btn2" id="go" type="button">Une absurdité, s’il vous plaît</button>
+        </div>
+        <p class="hero-note">100 % curieux · 0 % obligé d’être sérieux</p>
+      </div>
+
+      <div class="mascot">
+        <div class="bulle" id="bulle" role="status" aria-live="polite">Clique sur moi. Promis, c’est presque utile.</div>
+        <button type="button" id="mascot" aria-label="Faire parler le rédacteur en chef" aria-controls="bulle">
+          <img src="images/mascotte.jpg" width="600" height="681" alt="Le rédacteur en chef de Peanuts, avec son béret, ses lunettes et son café" fetchpriority="high">
+        </button>
+        <span class="mascot-sticker" aria-hidden="true">LA RÉDACTION<br>ASSUME (PRESQUE)</span>
+      </div>
+    </section>
+
+    <section class="une" id="une" aria-labelledby="titre-une">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Le petit bazar des idées</p>
+            <h2 id="titre-une">À la une <span aria-hidden="true">✳</span></h2>
+          </div>
+          <p class="section-intro">Des sujets à découvrir, des choses à comprendre et quelques détours parfaitement inutiles.</p>
+        </div>
+        <div class="grille">
+          <article class="c-pistache">
+            <span class="card-label">Curiosité</span>
+            <h3>Et si on apprenait un truc aujourd’hui ?</h3>
+            <p>Une question, une idée ou un fait étonnant : la curiosité n’a pas besoin d’un costume-cravate.</p>
+            <a class="text-link" href="#rubriques">Partir à la découverte <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="c-ciel">
+            <span class="card-label">Créativité</span>
+            <h3>Une idée un peu bizarre ? Parfait.</h3>
+            <p>Les idées qui sortent du cadre ont aussi leur place ici. Même celles qui ont besoin d’un café.</p>
+            <a class="text-link" href="#proposer">Proposer une idée <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="c-saumon">
+            <span class="card-label">Absurdité certifiée</span>
+            <h3>Le sérieux est en pause déjeuner.</h3>
+            <p>De l’humour, des expériences et des publications qui prennent la vie par son côté inattendu.</p>
+            <button class="text-link text-button" type="button" id="surprise">Me surprendre <span aria-hidden="true">↗</span></button>
+          </article>
+        </div>
+        <p class="section-footnote">Les contenus présentés ici sont la vitrine du magazine. Les publications complètes seront ajoutées au fil des sorties.</p>
+      </div>
+    </section>
+
+    <section class="rub wrap" id="rubriques" aria-labelledby="titre-rubriques">
+      <p class="eyebrow">Un peu de tout, avec intention</p>
+      <h2 id="titre-rubriques">On parle de quoi ?</h2>
+      <p class="rub-lead">De ce qui nous intrigue, nous amuse ou nous donne envie de créer.</p>
+      <ul>
+        <li>Culture & médias</li><li>Humour</li><li>Curiosités</li><li>Créations</li><li>Idées & débats</li><li>Vie quotidienne</li><li>Expériences</li><li>Et vos propositions</li>
+      </ul>
+    </section>
+
+    <section class="participer" id="proposer" aria-labelledby="titre-participer">
+      <div class="wrap participer-inner">
+        <div>
+          <p class="eyebrow">Le magazine se construit aussi avec vous</p>
+          <h2 id="titre-participer">À vous de jouer.</h2>
+          <p>Vous avez un sujet, une idée d’article, une question improbable ou une création à partager ? Faites-nous signe. La prochaine idée publiée pourrait être la vôtre.</p>
+        </div>
+        <a class="btn btn-light" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Nous retrouver sur Instagram <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="footer-wordmark" href="#accueil">peanuts<span>!</span></a>
+      <p>Un magazine complètement absurde et loufoque.</p>
+      <a href="#accueil">Retour en haut ↑</a>
+      <small>Fait avec curiosité, café et un sens discutable de l’humour.</small>
+    </div>
+  </footer>
+</body>
+</html>
