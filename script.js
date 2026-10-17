@@ -22,6 +22,7 @@
   const bulle = document.getElementById('bulle');
   const mascotte = document.getElementById('mascot');
   const bouton = document.getElementById('go');
+  const surprise = document.getElementById('surprise');
 
   if (!bulle) return;
 
@@ -32,20 +33,16 @@
     if (animationEnCours) return;
 
     let index;
-
     do {
       index = Math.floor(Math.random() * phrases.length);
     } while (phrases.length > 1 && index === dernierePhrase);
 
     dernierePhrase = index;
     bulle.textContent = phrases[index];
-
-    // Relance l'animation sans dépendre d'une bibliothèque.
     bulle.classList.remove('parle');
 
-    // Forcer le recalcul du style pour redémarrer l'animation.
+    // Redémarre l'animation CSS sans dépendance externe.
     void bulle.offsetWidth;
-
     bulle.classList.add('parle');
     animationEnCours = true;
 
@@ -55,11 +52,10 @@
     }, 320);
   }
 
-  if (mascotte) {
-    mascotte.addEventListener('click', dit);
-  }
-
-  if (bouton) {
-    bouton.addEventListener('click', dit);
-  }
+  mascotte?.addEventListener('click', dit);
+  bouton?.addEventListener('click', dit);
+  surprise?.addEventListener('click', () => {
+    dit();
+    bulle.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
 })();
