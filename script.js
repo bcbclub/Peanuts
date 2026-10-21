@@ -37,6 +37,77 @@
     toastTimer = window.setTimeout(() => toast.classList.remove('visible'), 4200);
   }
 
+  const navTriggers = Array.from(document.querySelectorAll('.nav-trigger'));
+  const searchTrigger = document.getElementById('search-trigger');
+  const searchPanel = document.getElementById('search-panel');
+  const searchInput = document.getElementById('site-search');
+  const searchForm = document.getElementById('site-search-form');
+
+  function closeMenus(except) {
+    navTriggers.forEach(trigger => {
+      const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      if (trigger !== except) {
+        trigger.setAttribute('aria-expanded', 'false');
+        if (panel) panel.hidden = true;
+      }
+    });
+  }
+
+  navTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      const willOpen = trigger.getAttribute('aria-expanded') !== 'true';
+      closeMenus(trigger);
+      if (searchPanel) searchPanel.hidden = true;
+      searchTrigger?.setAttribute('aria-expanded', 'false');
+      trigger.setAttribute('aria-expanded', String(willOpen));
+      if (panel) panel.hidden = !willOpen;
+    });
+  });
+
+  searchTrigger?.addEventListener('click', () => {
+    const willOpen = searchTrigger.getAttribute('aria-expanded') !== 'true';
+    closeMenus();
+    searchTrigger.setAttribute('aria-expanded', String(willOpen));
+    if (searchPanel) searchPanel.hidden = !willOpen;
+    if (willOpen) searchInput?.focus();
+  });
+
+  searchForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    const query = (searchInput?.value || '').trim().toLocaleLowerCase('fr');
+    if (!query) { searchInput?.focus(); return; }
+    const destinations = [
+      { words: ['magazine', 'publication', 'actualité', 'article'], id: 'magazine' },
+      { words: ['rubrique', 'culture', 'humour', 'curiosité', 'création'], id: 'rubriques' },
+      { words: ['participer', 'proposer', 'communauté', 'contact', 'idée'], id: 'participer' },
+      { words: ['manifeste', 'philosophie', 'esprit', 'propos'], id: 'manifeste' }
+    ];
+    const match = destinations.find(item => item.words.some(word => query.includes(word)));
+    const target = document.getElementById(match?.id || 'magazine');
+    if (target) {
+      target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      if (toast) {
+        toast.textContent = match ? 'Voici la rubrique qui correspond à ta recherche.' : 'Pas encore de résultat précis : voici le magazine.';
+        toast.classList.add('visible');
+        window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(() => toast.classList.remove('visible'), 3200);
+      }
+      if (searchPanel) searchPanel.hidden = true;
+      searchTrigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeMenus();
+      if (searchPanel) searchPanel.hidden = true;
+      searchTrigger?.setAttribute('aria-expanded', 'false');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      navigation?.classList.remove('open');
+    }
+  });
+
   surpriseButton?.addEventListener('click', showJoke);
   jokeButton?.addEventListener('click', showJoke);
 
