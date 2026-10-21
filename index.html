@@ -3,91 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#FFE04D">
-  <meta name="description" content="Peanuts, le magazine complètement absurde et loufoque. Des idées, des découvertes et des publications qui ne se prennent pas trop au sérieux.">
-  <title>Peanuts — Le magazine complètement absurde</title>
+  <meta name="theme-color" content="#F6EBDD">
+  <meta name="description" content="Peanuts : un magazine créatif, absurde et loufoque. Des idées, des curiosités et de l'humour, très sérieusement.">
+  <title>Peanuts — Sérieusement absurde.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600,20,1;9..144,700,20,1;9..144,800,20,1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="wrap">
-    <a class="wordmark" href="#accueil" aria-label="Peanuts, accueil">peanuts<span>!</span></a>
-    <nav aria-label="Navigation principale">
-      <a href="#une">À la une</a><a href="#rubriques">Rubriques</a><a href="#proposer">Participer</a>
+  <header class="site-header">
+    <a class="brand" href="#accueil" aria-label="Peanuts, accueil">peanuts<span class="brand-dot">.</span></a>
+    <nav class="main-nav" id="navigation" aria-label="Navigation principale">
+      <a href="#magazine">Le magazine</a><a href="#rubriques">Les rubriques</a><a class="nav-cta" href="#participer">Participer <span aria-hidden="true">↗</span></a>
     </nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
   </header>
   <main id="contenu">
-    <section class="hero wrap" id="accueil" aria-labelledby="titre-principal">
-      <div>
-        <p class="eyebrow"><span class="eyebrow-dot"></span> Le magazine pas comme les autres</p>
-        <h1 id="titre-principal">Beaucoup d’idées.<br><span class="titre-surbrillance">Peu de sérieux.</span></h1>
-        <p>Peanuts, c’est un terrain de jeu pour les idées, les découvertes et les trucs complètement loufoques. On apprend, on imagine et surtout, on ne se prend pas trop au sérieux.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#une">Explorer le magazine <span aria-hidden="true">↘</span></a>
-          <button class="btn2" id="go" type="button">Une absurdité, s’il vous plaît</button>
-        </div>
-        <p class="hero-note">100 % curieux · 0 % obligé d’être sérieux</p>
+    <section class="hero section-wrap" id="accueil">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Le magazine créatif des idées qui débordent</p>
+        <h1>Le monde est<br>assez sérieux.<br><em>Pas nous.</em></h1>
+        <p class="hero-description">De la curiosité, des idées qui partent de travers et des choses à découvrir. Peanuts, c’est le petit bazar créatif qui prend l’absurde <strong>très au sérieux.</strong></p>
+        <div class="hero-actions"><a class="button button-dark" href="#magazine">Entrer dans Peanuts <span aria-hidden="true">↘</span></a><button class="button button-quiet" id="surprise-button" type="button">Surprends-moi <span aria-hidden="true">✳</span></button></div>
+        <div class="hero-signature"><span class="signature-dot"></span> Sérieusement absurde.</div>
       </div>
-      <div class="mascot">
-        <div class="bulle" id="bulle" role="status" aria-live="polite">Clique sur moi. Promis, c’est presque utile.</div>
-        <button type="button" id="mascot" aria-label="Faire parler le rédacteur en chef" aria-controls="bulle">
-          <svg class="mascot-art" viewBox="0 0 440 480" role="img" aria-labelledby="mascot-title mascot-desc" xmlns="http://www.w3.org/2000/svg">
-            <title id="mascot-title">Berets</title>
-            <desc id="mascot-desc">Un personnage illustré au béret et aux lunettes, tenant une tasse de café.</desc>
-            <ellipse cx="220" cy="440" rx="145" ry="19" fill="#25170E" opacity=".13"/>
-            <path d="M99 414 Q107 337 162 322 L278 322 Q333 340 342 414 L318 438 L121 438Z" fill="#E8452C" stroke="#25170E" stroke-width="7" stroke-linejoin="round"/>
-            <path d="M165 326 L220 382 L275 326" fill="#FFF9E6" stroke="#25170E" stroke-width="6" stroke-linejoin="round"/>
-            <path d="M203 382 L220 402 L237 382 L229 431 L211 431Z" fill="#FFE04D" stroke="#25170E" stroke-width="5" stroke-linejoin="round"/>
-            <path d="M151 175 Q144 110 190 92 Q241 69 279 105 Q310 133 300 202 L285 276 Q270 319 221 322 Q172 315 156 276Z" fill="#F5C89B" stroke="#25170E" stroke-width="7"/>
-            <path d="M150 159 Q137 117 172 89 Q203 61 253 79 Q293 93 306 127 L288 151 Q263 130 230 132 Q185 129 150 159Z" fill="#B5D98F" stroke="#25170E" stroke-width="7" stroke-linejoin="round"/>
-            <path d="M169 102 Q207 66 259 96" fill="none" stroke="#25170E" stroke-width="5" stroke-linecap="round"/>
-            <path d="M178 179 Q194 168 207 180 M239 180 Q255 168 270 179" fill="none" stroke="#25170E" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="194" cy="194" r="22" fill="#FFF9E6" stroke="#25170E" stroke-width="6"/>
-            <circle cx="253" cy="194" r="22" fill="#FFF9E6" stroke="#25170E" stroke-width="6"/>
-            <circle cx="198" cy="194" r="6" fill="#25170E"/><circle cx="249" cy="194" r="6" fill="#25170E"/>
-            <path d="M216 194 L230 194" stroke="#25170E" stroke-width="6" stroke-linecap="round"/>
-            <path d="M207 235 Q223 249 240 232" fill="none" stroke="#25170E" stroke-width="6" stroke-linecap="round"/>
-            <path d="M180 216 Q167 227 177 239 M264 216 Q276 225 267 239" fill="none" stroke="#E99A82" stroke-width="5" stroke-linecap="round"/>
-            <path d="M143 344 Q118 353 103 387" fill="none" stroke="#25170E" stroke-width="20" stroke-linecap="round"/>
-            <path d="M297 344 Q322 352 338 380" fill="none" stroke="#25170E" stroke-width="20" stroke-linecap="round"/>
-            <path d="M83 366 Q69 350 83 337 L119 337 Q132 350 120 366Z" fill="#FFF9E6" stroke="#25170E" stroke-width="6"/>
-            <path d="M83 338 Q100 327 119 338" fill="none" stroke="#25170E" stroke-width="6"/>
-            <path d="M86 346 Q101 351 116 346" fill="none" stroke="#E8452C" stroke-width="5"/>
-            <path d="M330 376 L352 376 Q372 376 372 397 L372 405 Q372 426 350 426 L330 426Z" fill="#FFF9E6" stroke="#25170E" stroke-width="6"/>
-            <path d="M372 388 Q396 385 393 403 Q391 418 372 415" fill="none" stroke="#25170E" stroke-width="6"/>
-            <path d="M331 393 L371 393 L371 411 L331 411Z" fill="#8C4B2F"/>
-            <path d="M341 365 Q332 350 343 340 M359 365 Q350 348 361 336" fill="none" stroke="#25170E" stroke-width="4" stroke-linecap="round" opacity=".5"/>
-            <path d="M73 128 L58 112 M81 111 L73 91 M97 107 L98 87" stroke="#E8452C" stroke-width="5" stroke-linecap="round"/>
-            <path d="M336 166 L354 151 M344 184 L365 180" stroke="#E8452C" stroke-width="5" stroke-linecap="round"/>
-            <path d="M123 289 Q135 276 147 289 M293 289 Q305 276 317 289" fill="none" stroke="#25170E" stroke-width="4" stroke-linecap="round"/>
+      <div class="hero-art" aria-label="Illustration du rédacteur en chef de Peanuts">
+        <div class="art-topline"><span>ÉDITION Nº 001</span><span>UN PEU DE TOUT</span></div>
+        <div class="art-card">
+          <div class="sun-shape" aria-hidden="true"></div><div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="spark spark-one" aria-hidden="true">✳</div><div class="spark spark-two" aria-hidden="true">✳</div>
+          <svg class="mascot" viewBox="0 0 360 390" role="img" aria-labelledby="mascot-title mascot-desc" xmlns="http://www.w3.org/2000/svg">
+            <title id="mascot-title">Le rédacteur en chef de Peanuts</title><desc id="mascot-desc">Un personnage illustré au béret et aux lunettes, tenant une tasse de café.</desc>
+            <ellipse cx="180" cy="365" rx="111" ry="14" fill="#4A3023" opacity=".13"/>
+            <path d="M78 347 Q85 276 130 267 L230 267 Q275 280 282 347 L262 365 L98 365Z" fill="#B86F50" stroke="#4A3023" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M137 271 L180 315 L223 271" fill="#FFF8EF" stroke="#4A3023" stroke-width="5" stroke-linejoin="round"/><path d="M166 315 L180 332 L194 315 L188 357 L172 357Z" fill="#E8C58D" stroke="#4A3023" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M122 143 Q118 89 153 72 Q197 51 229 82 Q254 105 247 166 L235 226 Q223 262 181 266 Q140 260 127 226Z" fill="#E8B98F" stroke="#4A3023" stroke-width="6"/>
+            <path d="M121 131 Q109 95 139 71 Q166 47 207 63 Q241 74 254 104 L239 125 Q218 107 190 109 Q151 106 121 131Z" fill="#C7D2A2" stroke="#4A3023" stroke-width="6" stroke-linejoin="round"/><path d="M138 82 Q174 52 220 77" fill="none" stroke="#4A3023" stroke-width="4" stroke-linecap="round"/>
+            <path d="M145 149 Q160 139 171 150 M198 150 Q211 139 224 149" fill="none" stroke="#4A3023" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="158" cy="164" r="18" fill="#FFF8EF" stroke="#4A3023" stroke-width="5"/><circle cx="207" cy="164" r="18" fill="#FFF8EF" stroke="#4A3023" stroke-width="5"/><circle cx="161" cy="164" r="5" fill="#4A3023"/><circle cx="204" cy="164" r="5" fill="#4A3023"/><path d="M176 164 L188 164" stroke="#4A3023" stroke-width="5" stroke-linecap="round"/>
+            <path d="M169 199 Q181 211 195 198" fill="none" stroke="#4A3023" stroke-width="5" stroke-linecap="round"/><path d="M147 184 Q137 194 146 204 M218 184 Q228 193 220 204" fill="none" stroke="#D48D77" stroke-width="4" stroke-linecap="round"/>
+            <path d="M119 286 Q99 294 86 321 M241 286 Q262 295 275 319" fill="none" stroke="#4A3023" stroke-width="17" stroke-linecap="round"/>
+            <path d="M67 307 Q56 294 68 283 L97 283 Q109 295 98 307Z" fill="#FFF8EF" stroke="#4A3023" stroke-width="5"/><path d="M68 284 Q82 275 97 284" fill="none" stroke="#4A3023" stroke-width="5"/><path d="M71 291 Q82 296 95 291" fill="none" stroke="#B86F50" stroke-width="4"/>
+            <path d="M268 317 L286 317 Q304 317 304 335 L304 342 Q304 359 286 359 L268 359Z" fill="#FFF8EF" stroke="#4A3023" stroke-width="5"/><path d="M304 327 Q325 324 322 339 Q320 351 304 350" fill="none" stroke="#4A3023" stroke-width="5"/><path d="M269 331 L303 331 L303 346 L269 346Z" fill="#8C563D"/><path d="M278 308 Q269 296 278 287 M294 308 Q286 294 295 283" fill="none" stroke="#4A3023" stroke-width="3" stroke-linecap="round" opacity=".55"/>
           </svg>
-        </button>
-        <span class="mascot-sticker" aria-hidden="true">LA RÉDACTION<br>ASSUME (PRESQUE)</span>
-      </div>
-    </section>
-    <section class="une" id="une" aria-labelledby="titre-une">
-      <div class="wrap">
-        <div class="section-heading"><div><p class="eyebrow">Le petit bazar des idées</p><h2 id="titre-une">À la une <span aria-hidden="true">✳</span></h2></div><p class="section-intro">Des sujets à découvrir, des choses à comprendre et quelques détours parfaitement inutiles.</p></div>
-        <div class="grille">
-          <article class="c-pistache"><span class="card-label">Curiosité</span><h3>Et si on apprenait un truc aujourd’hui ?</h3><p>Une question, une idée ou un fait étonnant : la curiosité n’a pas besoin d’un costume-cravate.</p><a class="text-link" href="#rubriques">Partir à la découverte <span aria-hidden="true">↗</span></a></article>
-          <article class="c-ciel"><span class="card-label">Créativité</span><h3>Une idée un peu bizarre ? Parfait.</h3><p>Les idées qui sortent du cadre ont aussi leur place ici. Même celles qui ont besoin d’un café.</p><a class="text-link" href="#proposer">Proposer une idée <span aria-hidden="true">↗</span></a></article>
-          <article class="c-saumon"><span class="card-label">Absurdité certifiée</span><h3>Le sérieux est en pause déjeuner.</h3><p>De l’humour, des expériences et des publications qui prennent la vie par son côté inattendu.</p><button class="text-link text-button" type="button" id="surprise">Me surprendre <span aria-hidden="true">↗</span></button></article>
+          <div class="art-sticker">PAS TRÈS<br>SÉRIEUX <span>™</span></div><div class="art-caption">Le rédacteur en chef<br><strong>et sa tasse de confiance.</strong></div>
         </div>
-        <p class="section-footnote">Les contenus présentés ici sont la vitrine du magazine. Les publications complètes seront ajoutées au fil des sorties.</p>
+        <div class="art-bottomline"><span>FAIT AVEC CURIOSITÉ</span><span>DEPUIS 2026</span></div>
       </div>
     </section>
-    <section class="rub wrap" id="rubriques" aria-labelledby="titre-rubriques">
-      <p class="eyebrow">Un peu de tout, avec intention</p><h2 id="titre-rubriques">On parle de quoi ?</h2><p class="rub-lead">De ce qui nous intrigue, nous amuse ou nous donne envie de créer.</p>
-      <ul><li>Culture & médias</li><li>Humour</li><li>Curiosités</li><li>Créations</li><li>Idées & débats</li><li>Vie quotidienne</li><li>Expériences</li><li>Et vos propositions</li></ul>
+    <section class="manifesto"><div class="section-wrap manifesto-inner"><p class="eyebrow">Notre petite philosophie</p><p class="manifesto-line">La curiosité est une affaire sérieuse. <em>Le reste, beaucoup moins.</em></p><span class="manifesto-mark" aria-hidden="true">✳</span></div></section>
+    <section class="magazine section-wrap" id="magazine">
+      <div class="section-heading"><div><p class="eyebrow">À feuilleter sans mode d’emploi</p><h2>Bienvenue dans<br><em>le petit bazar.</em></h2></div><p class="section-intro">Des découvertes, des créations et des détours inattendus. Le tout servi avec une bonne dose de second degré.</p></div>
+      <div class="story-grid">
+        <article class="story story-large"><div class="story-visual visual-pistache"><span class="visual-number">01</span><span class="visual-symbol" aria-hidden="true">?</span><span class="visual-note">QUESTION DU JOUR</span></div><div class="story-meta"><span>Curiosités</span><span>À découvrir</span></div><h3>Et si on regardait les choses autrement ?</h3><p>Les questions les plus simples ouvrent parfois les portes les plus inattendues.</p><a href="#rubriques" class="story-link">Explorer les curiosités <span aria-hidden="true">↗</span></a></article>
+        <article class="story"><div class="story-visual visual-rose"><span class="visual-number">02</span><span class="visual-symbol" aria-hidden="true">✳</span><span class="visual-note">IDÉES EN LIBERTÉ</span></div><div class="story-meta"><span>Créativité</span><span>Terrain de jeu</span></div><h3>Les idées bizarres sont les bienvenues.</h3><p>Ici, sortir du cadre est une excellente façon de commencer.</p><a href="#participer" class="story-link">Proposer une idée <span aria-hidden="true">↗</span></a></article>
+        <article class="story"><div class="story-visual visual-bleu"><span class="visual-number">03</span><span class="visual-symbol visual-coffee" aria-hidden="true">☕</span><span class="visual-note">ABSURDITÉ ASSUMÉE</span></div><div class="story-meta"><span>Humour</span><span>Sans garantie</span></div><h3>Le sérieux est parti prendre un café.</h3><p>Des petites absurdités pour remettre la journée dans le bon sens.</p><button class="story-link story-button" id="random-joke" type="button">Une absurdité, vite <span aria-hidden="true">↗</span></button></article>
+      </div>
+      <p class="editorial-note"><span aria-hidden="true">✳</span> Les premiers contenus arrivent. Peanuts sort encore du four : le magazine se construit au fil des idées.</p>
     </section>
-    <section class="participer" id="proposer" aria-labelledby="titre-participer">
-      <div class="wrap participer-inner"><div><p class="eyebrow">Le magazine se construit aussi avec vous</p><h2 id="titre-participer">À vous de jouer.</h2><p>Vous avez un sujet, une idée d’article, une question improbable ou une création à partager ? Faites-nous signe. La prochaine idée publiée pourrait être la vôtre.</p></div><a class="btn btn-light" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Nous retrouver sur Instagram <span aria-hidden="true">↗</span></a></div>
-    </section>
+    <section class="rubrics" id="rubriques"><div class="section-wrap rubrics-inner"><div class="rubrics-copy"><p class="eyebrow">Le menu, sans menu fixe</p><h2>On parle de quoi ?</h2><p>De tout ce qui nous intrigue, nous amuse ou nous donne envie de fabriquer quelque chose.</p></div><div class="rubric-list" aria-label="Rubriques de Peanuts"><span>Culture & médias <b>↗</b></span><span>Humour <b>↗</b></span><span>Curiosités <b>↗</b></span><span>Créations <b>↗</b></span><span>Idées & débats <b>↗</b></span><span>Vie quotidienne <b>↗</b></span><span>Vos idées aussi <b>↗</b></span></div></div></section>
+    <section class="participate section-wrap" id="participer"><div class="participate-card"><div class="participate-copy"><p class="eyebrow">À plusieurs, c’est encore plus loufoque</p><h2>La prochaine idée<br>pourrait être <em>la vôtre.</em></h2><p>Un sujet improbable, une question, une création ou une envie de participer ? Peanuts est un terrain de jeu collectif. À vous de lancer la prochaine idée.</p><a class="button button-light" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Retrouver Peanuts sur Instagram <span aria-hidden="true">↗</span></a></div><div class="participate-art" aria-hidden="true"><div class="paper paper-one">ET SI…</div><div class="paper paper-two">POURQUOI PAS ?</div><div class="paper paper-three">OH.</div><span class="participate-star">✳</span></div></div></section>
   </main>
-  <footer><div class="wrap footer-inner"><a class="footer-wordmark" href="#accueil">peanuts<span>!</span></a><p>Un magazine complètement absurde et loufoque.</p><a href="#accueil">Retour en haut ↑</a><small>Fait avec curiosité, café et un sens discutable de l’humour.</small></div></footer>
+  <footer class="site-footer"><div class="section-wrap footer-main"><a class="brand footer-brand" href="#accueil">peanuts<span class="brand-dot">.</span></a><p>Un magazine créatif. Une absurdité bien élevée.</p><a href="#accueil" class="back-top">Retour en haut ↑</a></div><div class="section-wrap footer-bottom"><span>© 2026 Peanuts · Les Innocents</span><span>Sérieusement absurde.</span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
