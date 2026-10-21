@@ -17,9 +17,33 @@
   <header class="site-header">
     <a class="brand" href="#accueil" aria-label="Peanuts, accueil">peanuts<span class="brand-dot">.</span></a>
     <nav class="main-nav" id="navigation" aria-label="Navigation principale">
-      <a href="#magazine">Le magazine</a><a href="#rubriques">Les rubriques</a><a class="nav-cta" href="#participer">Participer <span aria-hidden="true">↗</span></a>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-magazine">Magazine <span class="nav-chevron" aria-hidden="true">⌄</span></button>
+        <div class="mega-menu" id="menu-magazine" hidden>
+          <div class="mega-feature"><span class="mega-kicker">LE MAGAZINE</span><strong>La curiosité, sans mode d’emploi.</strong><p>Des idées, des découvertes et une bonne dose de second degré.</p><a href="#magazine">Découvrir Peanuts <span aria-hidden="true">↗</span></a></div>
+          <div class="mega-column"><span class="mega-label">À LA UNE</span><a href="#magazine">Dernières publications</a><a href="#rubriques">Toutes les rubriques</a><a href="#magazine">Les curiosités du moment</a></div>
+          <div class="mega-column"><span class="mega-label">L’ESPRIT PEANUTS</span><a href="#manifeste">Notre philosophie</a><a href="#participer">Proposer un sujet</a><a href="#participer">Créer avec nous</a></div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-explorer">Explorer <span class="nav-chevron" aria-hidden="true">⌄</span></button>
+        <div class="mega-menu mega-menu-compact" id="menu-explorer" hidden>
+          <div class="mega-column"><span class="mega-label">LES RUBRIQUES</span><a href="#rubriques">Culture & médias</a><a href="#rubriques">Humour</a><a href="#rubriques">Curiosités</a><a href="#rubriques">Créations</a></div>
+          <div class="mega-column"><span class="mega-label">À EXPLORER</span><a href="#magazine">Les idées inattendues</a><a href="#magazine">Le coin absurde</a><a href="#participer">Vos idées</a></div>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-propos">À propos <span class="nav-chevron" aria-hidden="true">⌄</span></button>
+        <div class="mega-menu mega-menu-compact" id="menu-propos" hidden>
+          <div class="mega-column"><span class="mega-label">QUI SOMMES-NOUS ?</span><a href="#manifeste">L’esprit Peanuts</a><a href="#participer">La communauté</a><a href="#participer">Les Innocents</a></div>
+          <div class="mega-note"><span aria-hidden="true">✳</span><strong>Sérieusement absurde.</strong><p>Un magazine créatif qui sort encore du four.</p></div>
+        </div>
+      </div>
+      <a class="nav-link" href="#magazine">Actualités</a>
+      <button class="search-trigger" id="search-trigger" type="button" aria-label="Rechercher sur Peanuts" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg></button>
+      <div class="search-panel" id="search-panel" hidden><label for="site-search">Rechercher dans Peanuts</label><form id="site-search-form"><input id="site-search" type="search" placeholder="Un sujet, une rubrique…" autocomplete="off"><button type="submit" aria-label="Lancer la recherche">↗</button></form><p>Essaie « humour », « curiosités » ou « participer ».</p></div>
     </nav>
-    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    <div class="header-actions"><a class="header-join" href="#participer">Rejoindre Peanuts <span aria-hidden="true">↗</span></a><button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Ouvrir le menu"><span></span><span></span></button></div>
   </header>
   <main id="contenu">
     <section class="hero section-wrap" id="accueil">
@@ -54,7 +78,7 @@
         <div class="art-bottomline"><span>FAIT AVEC CURIOSITÉ</span><span>DEPUIS 2026</span></div>
       </div>
     </section>
-    <section class="manifesto"><div class="section-wrap manifesto-inner"><p class="eyebrow">Notre petite philosophie</p><p class="manifesto-line">La curiosité est une affaire sérieuse. <em>Le reste, beaucoup moins.</em></p><span class="manifesto-mark" aria-hidden="true">✳</span></div></section>
+    <section class="manifesto" id="manifeste"><div class="section-wrap manifesto-inner"><p class="eyebrow">Notre petite philosophie</p><p class="manifesto-line">La curiosité est une affaire sérieuse. <em>Le reste, beaucoup moins.</em></p><span class="manifesto-mark" aria-hidden="true">✳</span></div></section>
     <section class="magazine section-wrap" id="magazine">
       <div class="section-heading"><div><p class="eyebrow">À feuilleter sans mode d’emploi</p><h2>Bienvenue dans<br><em>le petit bazar.</em></h2></div><p class="section-intro">Des découvertes, des créations et des détours inattendus. Le tout servi avec une bonne dose de second degré.</p></div>
       <div class="story-grid">
